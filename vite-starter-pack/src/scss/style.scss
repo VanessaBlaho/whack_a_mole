@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+ 
+html {
+    font-family: sans-serif;
+}
+ 
+body {
+    min-height: 100vh;
+    background-color: #1d7a1d;
+    margin: 0;
+    padding: 4rem;
+}
+ 
+.info {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+ 
+.button {
+    color: #1d7a1d;
+    background-color: #ffffff;
+    border: 2px solid #1d7a1d;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+ 
+.button:hover {
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+ 
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 640px;
+    background-color: #228b22;
+    border-radius: 0.25rem;
+    margin: 2rem auto;
+    padding-bottom: 4rem;
+}
+ 
+.hole {
+    width: 33%;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.hole-img {
+    width: 70%;
+    height: 100%;
+    background: url('../hole.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    z-index: 2;
+}
+ 
+.mole {
+    width: 50%;
+    height: 50%;
+    background: url('../mole.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.4s;
+}
+ 
+.hole.active .mole {
+    top: 3.75rem;
+}
+ 
+.score {
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+}
